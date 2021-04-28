@@ -46,6 +46,6 @@ class Recintos extends Model
 
     public function conciertos()
     {
-        return $this->hasMany(Conciertos::class);
+        return $this->hasMany(Conciertos::class, 'id_recinto');
     }
 }

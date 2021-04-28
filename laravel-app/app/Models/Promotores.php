@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Notifications\Notifiable;
 
 class Promotores extends Model
 {
@@ -44,6 +45,6 @@ class Promotores extends Model
 
     public function conciertos()
     {
-        return $this->hasMany(Conciertos::class);
+        return $this->hasMany(Conciertos::class, 'id_promotor');
     }
 }

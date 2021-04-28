@@ -32,7 +32,7 @@ class Grupos_Conciertos extends Model
 
     public function concierto()
     {
-        return $this->belongsTo(Concierto::class);
+        return $this->belongsTo(Conciertos::class);
     }
 
     public function grupo()

@@ -46,12 +46,12 @@ class Conciertos extends Model
 
     public function promotor()
     {
-        return $this->belongsTo(promotor::class);
+        return $this->belongsTo(Promotores::class, 'id_promotor');
     }
 
     public function recinto()
     {
-        return $this->belongsTo(Recinto::class);
+        return $this->belongsTo(Recintos::class, 'id_recinto');
     }
 
     public function grupos_conciertos()
