@@ -5,19 +5,17 @@
 
 5000 --> phpmyadmin tool
 
-9000 --> php service
+9000 --> php service cgi
 
 ## Getting started
 `docker-compose up -d`\
-`docker-compose exec app php artisan key:generate` \
-`docker-compose exec app php artisan config:cache` 
+`docker-compose exec app php artisan migrate:fresh` \
+`docker-compose exec app php artisan db:seed` \
 
 ## Artisan
 php artisan make:model Project -mc (create model, migration, controller named Project)
 
 php artisan tinker (Access to Psy shell)
-
-<p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
 
 ## About Laravel
 
