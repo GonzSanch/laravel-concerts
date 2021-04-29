@@ -44,17 +44,6 @@ class Promotores extends Model
         'updated_at'
     ];
 
-
-    //TODO: cascade sofdelete ?
-    // /**
-    //  * The associated elements that's been cascade softdeleted.
-    //  *
-    //  * @var string
-    //  */
-    // protected $cascadeDeletes = [
-    //     'conciertos'
-    // ];
-
     public function conciertos()
     {
         return $this->hasMany(Conciertos::class, 'id_promotor');

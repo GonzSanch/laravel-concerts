@@ -32,16 +32,6 @@ class Medios extends Model
         'nombre'
     ];
 
-    //TODO: cascade sofdelete ?
-    // /**
-    //  * The associated elements that's been cascade softdeleted.
-    //  *
-    //  * @var string
-    //  */
-    // protected $cascadeDeletes = [
-    //     'conciertos'
-    // ];
-
     public function grupos_conciertos()
     {
         return $this->hasMany(Grupos_Medios::class, 'id_medio');
