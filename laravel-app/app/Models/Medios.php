@@ -44,6 +44,6 @@ class Medios extends Model
 
     public function grupos_conciertos()
     {
-        return $this->hasMany(Grupos_Conciertos::class, 'id_medios');
+        return $this->hasMany(Grupos_Medios::class, 'id_medio');
     }
 }

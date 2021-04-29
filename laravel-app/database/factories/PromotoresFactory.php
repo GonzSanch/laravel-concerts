@@ -22,7 +22,8 @@ class PromotoresFactory extends Factory
     public function definition()
     {
         return [
-            'nombre' => $this->faker->unique()->firstName()
+            'nombre' => $this->faker->unique()->firstName(),
+            'email' => $this->faker->unique()->email()
         ];
     }
 }

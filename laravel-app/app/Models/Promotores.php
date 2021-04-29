@@ -8,7 +8,7 @@ use Illuminate\Notifications\Notifiable;
 
 class Promotores extends Model
 {
-    use HasFactory, Notifiable; //notifiable for mails report
+    use HasFactory, Notifiable;
 
     /**
      * The table associated with the model.
@@ -30,8 +30,20 @@ class Promotores extends Model
      * @var array
      */
     protected $fillable = [
-        'nombre'
+        'nombre',
+        'email'
     ];
+
+    /**
+     * The attributes that are hidden.
+     *
+     * @var array
+     */
+    protected $hidden = [
+        'created_at',
+        'updated_at'
+    ];
+
 
     //TODO: cascade sofdelete ?
     // /**

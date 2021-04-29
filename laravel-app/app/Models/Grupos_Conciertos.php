@@ -29,7 +29,8 @@ class Grupos_Conciertos extends Model
      * @var array
      */
     protected $fillable = [
-        'id_concierto'
+        'id_concierto',
+        'id_grupo'
     ];
 
     /**
@@ -48,7 +49,9 @@ class Grupos_Conciertos extends Model
      */
     protected $hidden = [
         'id_grupo',
-        'id_concierto'
+        'id_concierto',
+        'created_at',
+        'updated_at'
     ];
 
     public function concierto()
@@ -62,7 +65,7 @@ class Grupos_Conciertos extends Model
     }
 
     public function getGrupoAttribute() {
-        return $this->grupo()->get();
+        return $this->grupo()->first();
     }
 
 }

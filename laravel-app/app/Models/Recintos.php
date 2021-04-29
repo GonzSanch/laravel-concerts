@@ -34,6 +34,16 @@ class Recintos extends Model
         'precio_entrada'
     ];
 
+    /**
+     * The attributes that are hidden.
+     *
+     * @var array
+     */
+    protected $hidden = [
+        'created_at',
+        'updated_at'
+    ];
+
     //TODO: cascade sofdelete ?
     // /**
     //  * The associated elements that's been cascade softdeleted.

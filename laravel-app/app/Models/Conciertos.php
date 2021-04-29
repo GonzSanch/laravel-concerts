@@ -31,8 +31,23 @@ class Conciertos extends Model
     protected $fillable = [
         'nombre',
         'numero_espectadores',
-        'fecha'
+        'fecha',
+        'id_promotor',
+        'id_recinto'
     ];
+
+    /**
+     * The attributes that are hidden.
+     *
+     * @var array
+     */
+    protected $hidden = [
+        'id_promotor',
+        'id_recinto',
+        'created_at',
+        'updated_at'
+    ];
+
 
     //TODO: cascade sofdelete ?
     // /**

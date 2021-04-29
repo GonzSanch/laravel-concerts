@@ -16,8 +16,8 @@ class CreatePromotoresTable extends Migration
         Schema::create('promotores', function (Blueprint $table) {
             $table->id();
             $table->string('nombre', 100)->unique();
+            $table->string('email')->unique();
             $table->timestamps();
-            //TODO: include softdelete ?
         });
     }
 
