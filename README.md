@@ -10,7 +10,9 @@
 ## Getting started
 `docker-compose up -d`\
 `docker-compose exec app php artisan migrate:fresh` \
-`docker-compose exec app php artisan db:seed` \
+`docker-compose exec app php artisan db:seed`
+
+Replace .env.example to .env and set your SMTP config to enable email notifications.
 
 ## Artisan
 php artisan make:model Project -mc (create model, migration, controller named Project)
