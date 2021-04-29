@@ -14,7 +14,7 @@ class Grupos_Medios extends Model
      *
      * @var string
      */
-    protected $table = 'grupos_medioss';
+    protected $table = 'grupos_medios';
 
     /**
      * The primary key associated with the table.

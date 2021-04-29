@@ -14,7 +14,7 @@ class Medios extends Model
      *
      * @var string
      */
-    protected $table = 'promotores';
+    protected $table = 'medios';
 
     /**
      * The primary key associated with the table.

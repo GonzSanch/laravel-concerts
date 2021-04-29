@@ -54,14 +54,14 @@ class Conciertos extends Model
         return $this->belongsTo(Recintos::class, 'id_recinto');
     }
 
-    public function grupos_conciertos()
+    public function grupos()
     {
-        return $this->hasMany(Grupos_Conciertos::class);
+        return $this->hasMany(Grupos_Conciertos::class, 'id_concierto');
     }
 
-    public function grupos_medios()
+    public function medios()
     {
-        return $this->hasMany(Grupos_Medios::class);
+        return $this->hasMany(Grupos_Medios::class, 'id_concierto');
     }
 
 }

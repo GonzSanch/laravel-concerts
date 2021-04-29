@@ -14,7 +14,7 @@ class Grupos extends Model
      *
      * @var string
      */
-    protected $table = 'promotores';
+    protected $table = 'grupos';
 
     /**
      * The primary key associated with the table.
@@ -32,16 +32,6 @@ class Grupos extends Model
         'nombre',
         'cache'
     ];
-
-    //TODO: cascade sofdelete ?
-    // /**
-    //  * The associated elements that's been cascade softdeleted.
-    //  *
-    //  * @var string
-    //  */
-    // protected $cascadeDeletes = [
-    //     'conciertos'
-    // ];
 
     public function grupos_conciertos()
     {

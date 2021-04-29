@@ -28,15 +28,41 @@ class Grupos_Conciertos extends Model
      *
      * @var array
      */
-    protected $fillable = [];
+    protected $fillable = [
+        'id_concierto'
+    ];
+
+    /**
+     * The attributes that are added.
+     *
+     * @var array
+     */
+    protected $appends = [
+        'grupo'
+    ];
+
+    /**
+     * The attributes that are hidden.
+     *
+     * @var array
+     */
+    protected $hidden = [
+        'id_grupo',
+        'id_concierto'
+    ];
 
     public function concierto()
     {
-        return $this->belongsTo(Conciertos::class);
+        return $this->belongsTo(Conciertos::class, 'id_concierto');
     }
 
     public function grupo()
     {
-        return $this->belongsTo(Grupos::class);
+        return $this->belongsTo(Grupos::class, 'id_grupo')->select('nombre', 'cache');
     }
+
+    public function getGrupoAttribute() {
+        return $this->grupo()->get();
+    }
+
 }
