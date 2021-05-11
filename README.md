@@ -1,3 +1,5 @@
+### TODO
+- [ ] Make code more scalable on logic part
 ## Expose
 80/443 nginx --> laravel app
 
